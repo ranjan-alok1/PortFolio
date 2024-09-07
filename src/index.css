@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@layer base {
+  body {
+    @apply font-[Outfit];
+  }
+
+  li {
+    @apply px-4;
+    @apply cursor-pointer;
+  }
+}
+
+
+
+body {
+  background-color: rgb(33, 33, 33);
+}
+
+.scroll-mt-custom {
+  scroll-margin-top: 8rem; /* 8rem = 128px */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+}
+
+.wave {
+  animation: wave 2.1s infinite;
+  transform-origin: 70% 70%;
+}
+
+
+.delay-0 {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.delay-1 {
+  animation: fadeIn 1s ease-in-out forwards 200ms;
+}
+
+.delay-2 {
+  animation: fadeIn 1s ease-in-out forwards 400ms;
+}
+
+.delay-3 {
+  animation: fadeIn 1s ease-in-out forwards 600ms;
+}
+.delay-4 {
+  animation: fadeIn 1s ease-in-out forwards 800ms;
+}
+
+html {
+  scroll-padding-top: 100px;
+}
+
+
+/* *{
+  border: 1px solid red !important;
+} */
