@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
-import Fade from "react-reveal/Fade";
+import { SiLeetcode } from "react-icons/si"; 
+import { Fade } from "react-awesome-reveal";
 
 const Footer = () => {
   return (
