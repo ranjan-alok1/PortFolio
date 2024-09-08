@@ -7,6 +7,10 @@ import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const form = useRef();
+  // for debug
+  console.log('Service ID:', process.env.REACT_APP_EMAILJS_SERVICE_ID);
+  console.log('Template ID:', process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
+  console.log('User ID:', process.env.REACT_APP_EMAILJS_USER_ID);
 
   const sendEmail = async (e) => {
     e.preventDefault();
