@@ -2,47 +2,27 @@ import React, { useRef } from "react";
 import { Fade } from "react-awesome-reveal";
 import { message } from "antd";
 import { FaMessage } from "react-icons/fa6";
+import emailjs from 'emailjs-com';
+
 
 const Contact = () => {
   const form = useRef();
-  // for debug
-  // console.log('Service ID:', process.env.REACT_APP_EMAILJS_SERVICE_ID);
-  // console.log('Template ID:', process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
-  // console.log('User ID:', process.env.REACT_APP_EMAILJS_USER_ID);
 
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(e.target);
-    const formObject = Object.fromEntries(formData.entries());
+    const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const userID = process.env.REACT_APP_EMAILJS_USER_ID;
 
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          serviceID: process.env.REACT_APP_EMAILJS_SERVICE_ID,
-          templateID: process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-          userID: process.env.REACT_APP_EMAILJS_USER_ID,
-          formData: formObject,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        // console.log(data.message);
+    emailjs.sendForm(serviceID, templateID, form.current, userID)
+      .then((result) => {
+        console.log(result.text);
         message.success('Message sent successfully!');
-      } else {
-        // console.error(data.message);
+      }, (error) => {
+        console.error(error.text);
         message.error('Failed to send the message, please try again.');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      message.error('Failed to send the message, please try again.');
-    }
+      });
 
     e.target.reset();
   };

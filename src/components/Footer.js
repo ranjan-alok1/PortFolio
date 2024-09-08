@@ -12,17 +12,17 @@ const Footer = () => {
             href="https://www.linkedin.com/in/alok-ranjan-singh-23551622b/"
             target="_blank" rel="noopener noreferrer" className="mx-2 hover:scale-110"
           >
-            <FaLinkedin size={25} />
+            <FaLinkedin size={26} />
           </a>
 
           <a href="https://github.com/ranjan-alok1" target="_blank" rel="noopener noreferrer" className="mx-2 hover:scale-110">
-            <FaGithub size={25} />
+            <FaGithub size={26} />
           </a>
           <a
             href="https://leetcode.com/u/ranjan__alok_/"
             target="_blank" rel="noopener noreferrer" className="mx-2 hover:scale-110"
           >
-            <SiLeetcode size={25} />
+            <SiLeetcode size={26} />
           </a>
         </div>
         <div className="p-2">
