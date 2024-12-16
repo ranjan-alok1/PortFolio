@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-scroll";
-import { FaTimes, FaBars } from "react-icons/fa";
-import logo from "../assets/logo_nav.png"
+import { FaTimes, FaBars, FaDownload } from "react-icons/fa";
+import logo from "../assets/logo_nav.png";
+import resume from "../assets/Alok_resume_.pdf";
 
 const Navbar = () => {
   const [tap, setTap] = useState(false);
@@ -31,7 +32,7 @@ const Navbar = () => {
       }
     >
       <div>
-        {/* <img src={logo} alt="logo image" style={{ width: "50px" }} /> */}
+        {/* Logo Link */}
         <Link to="home" smooth={true} duration={500} className="">
           <span className="hover:text-[#24ce6b] hover:cursor-pointer">
             <img src={logo} alt="logo" style={{ width: "150px" }}></img>
@@ -60,15 +61,36 @@ const Navbar = () => {
             Projects
           </Link>
         </li>
+
+        
         <li className="font-bold hover:text-[#24ce6b] duration-300">
           <Link to="contact" smooth={true} duration={500}>
             Contact
           </Link>
         </li>
+        <li className="font-bold hover:text-[#24ce6b] duration-300 flex items-center gap-2">
+          <a
+            href={resume}
+            download="Alok_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:cursor-pointer"
+          >
+            Resume
+          </a>
+          <a
+            href={resume}
+            download="Alok_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:cursor-pointer hover:text-[#24ce6b]"
+          >
+            <FaDownload />
+          </a>
+        </li>
       </ul>
 
-      {/* hamburger menu */}
-
+      {/* Hamburger Menu */}
       <div onClick={handleClick} className="md:hidden z-10">
         {!tap ? <FaBars className="hover:cursor-pointer" /> : <FaTimes />}
       </div>
@@ -80,7 +102,7 @@ const Navbar = () => {
             : "absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-[rgb(33,33,33)] duration-300]"
         }
       >
-        <li className="py-6 text-4xl hover:text-[rgb(36,206,107)] duration-300">
+        <li className="py-6 text-4xl hover:text-[#24ce6b] duration-300">
           <Link onClick={handleClick} to="home" smooth={true} duration={500}>
             Home
           </Link>
@@ -105,10 +127,22 @@ const Navbar = () => {
             Projects
           </Link>
         </li>
+        
         <li className="py-6 text-4xl hover:text-[#24ce6b] duration-300">
           <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
             Contact
           </Link>
+        </li>
+        <li className="py-6 text-4xl hover:text-[#24ce6b] duration-300">
+          <a
+            href={resume}
+            download="Alok_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:cursor-pointer"
+          >
+            <span>Resume</span> <span ><FaDownload className="w-5 h-5" /></span>
+          </a>
         </li>
       </ul>
     </div>

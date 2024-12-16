@@ -17,7 +17,7 @@ const Project = () => {
 
                     {/* Project Card 1 */}
                     <Fade direction='left'>
-                        <div className="card glass w-[370px] h-[500px] m-2 shadow-lg shadow-black flex flex-col">
+                        <div className="card glass w-[280px] h-[500px] m-2 shadow-lg shadow-black flex flex-col">
                             <figure>
                                 <img
                                     className="w-full h-[200px] object-cover transform hover:scale-110 transition duration-300 ease-in-out"
@@ -48,7 +48,7 @@ const Project = () => {
 
                     {/* Project Card 2 */}
                     <Fade>
-                        <div className="card glass w-[370px] h-[500px] m-2 shadow-lg shadow-black flex flex-col">
+                        <div className="card glass w-[280px] h-[500px] m-2 shadow-lg shadow-black flex flex-col">
                             <figure>
                                 <img
                                     className="w-full h-[200px] object-cover transform hover:scale-110 transition duration-300 ease-in-out"
@@ -79,7 +79,7 @@ const Project = () => {
 
                     {/* Project Card 3 */}
                     <Fade direction='right'>
-                        <div className="card glass w-[370px] h-[500px] m-2 shadow-lg shadow-black flex flex-col">
+                        <div className="card glass w-[280px] h-[500px] m-2 shadow-lg shadow-black flex flex-col">
                             <figure>
                                 <img
                                     className="w-full h-[200px] object-cover transform hover:scale-110 transition duration-300 ease-in-out"
