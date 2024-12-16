@@ -27,9 +27,7 @@ const About = () => {
                 With a passion for web development, I am a
                 proficient developer capable of designing and developing complex
                 applications with expertise in <span className="text-[#24ce6b]">React</span> and <span className="text-[#24ce6b]"> Node.js</span>.
-              </p>
               <br />
-              <p className="text-[1.40rem]">
                 I enjoy programming because it requires me to solve problems, and I'm always looking for new challenges to hone my analytical    and creative thinking abilities.
               </p>
               <br />
@@ -38,9 +36,7 @@ const About = () => {
                 implementing them in my projects. I'm a self-motivated and
                 hardworking individual who is always ready to learn new things and
                 work in a team.
-              </p>
-              <br />
-              <p className="text-[1.40rem]">
+                <br />
                 Outside of coding and academics, I enjoy reading
                 novels and playing cricket.
               </p>
