@@ -3,6 +3,7 @@ import { Fade } from 'react-awesome-reveal'
 import clock from '../assets/digital_clock.png'
 import budgetimg from '../assets/expense-app.png'
 import memorygame from '../assets/flip-game.png'
+import flextrack from "../assets/flextrack.png"
 
 const Project = () => {
     return (
@@ -16,7 +17,38 @@ const Project = () => {
                 <div className="flex flex-wrap justify-center items-stretch gap-212">
 
                     {/* Project Card 1 */}
+
                     <Fade direction='left'>
+                        <div className="card glass w-[280px] h-[500px] m-2 shadow-lg shadow-black flex flex-col">
+                            <figure>
+                                <img
+                                    className="w-full h-[200px] object-cover transform hover:scale-110 transition duration-300 ease-in-out"
+                                    src={flextrack}
+                                    alt="FlexTrack web-app"
+                                />
+                            </figure>
+                            <div className="card-body flex flex-col flex-grow p-4">
+                                <h2 className="card-title">FlexTrack</h2>
+                                <p>FlexTrack, a dynamic fitness tracker app built with the MERN stack, allowing users to securely manage, track, and categorize workouts with an interactive and user-friendly interface.</p>
+                                <div className="card-actions mt-auto">
+                                    <a
+                                        href="https://github.com/ranjan-alok1/FlexTrack-frontend"
+                                        target="_blank" rel="noopener noreferrer"
+                                    >
+                                        <button className="text-white text-md font-bold p-2 my-2 rounded-lg flex items-center bg-[#24ce6b] hover:bg-pink-600">Github</button>
+                                    </a>
+                                    <a
+                                        href="https://flex-track-frontend.vercel.app/"
+                                        target="_blank" rel="noopener noreferrer"
+                                    >
+                                        <button className="text-white text-md font-bold p-2 my-2 rounded-lg flex items-center bg-[#24ce6b] hover:bg-pink-600">Demo</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </Fade>
+
+                    <Fade>
                         <div className="card glass w-[280px] h-[500px] m-2 shadow-lg shadow-black flex flex-col">
                             <figure>
                                 <img
@@ -76,6 +108,8 @@ const Project = () => {
                             </div>
                         </div>
                     </Fade>
+                    
+                    
 
                     {/* Project Card 3 */}
                     <Fade direction='right'>
@@ -98,7 +132,7 @@ const Project = () => {
                                         <button className="text-white text-md font-bold p-2 my-2 rounded-lg flex items-center bg-[#24ce6b] hover:bg-pink-600">Github</button>
                                     </a>
                                     <a
-                                        href="https://flip-frenzy.netlify.app/"
+                                        href="https://clock-web-app-eight.vercel.app/"
                                         target="_blank" rel="noopener noreferrer"
                                     >
                                         <button className="text-white text-md font-bold p-2 my-2 rounded-lg flex items-center bg-[#24ce6b] hover:bg-pink-600">Demo</button>
