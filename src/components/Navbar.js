@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 import { FaTimes, FaBars, FaDownload } from "react-icons/fa";
 import logo from "../assets/logo_nav.png";
-import resume from "../assets/Alok_resume_.pdf";
+import resume from "../assets/Alok_Ranjan_Singh_resume.pdf";
 
 const Navbar = () => {
   const [tap, setTap] = useState(false);
@@ -136,7 +136,7 @@ const Navbar = () => {
         <li className="py-6 text-4xl hover:text-[#24ce6b] duration-300">
           <a
             href={resume}
-            download="Alok_Resume.pdf"
+            download="Alok_Ranjan_Singh_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:cursor-pointer"
